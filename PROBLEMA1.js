@@ -1,9 +1,9 @@
 const generarRankingFinal = (jugadores) => {
   return jugadores
-    .filter(jugador => !jugador.esHack) // 1. Filtrar a los hackers
-    .sort((a, b) => b.puntajeFinal - a.puntajeFinal) // 2. Ordenar descendente
-    .slice(0, 3) // 3. Limitar a los 3 mejores
-    .map(({ nombreUsuario, puntajeFinal }) => ({ nombreUsuario, puntajeFinal })); // 4. Mapear y destructurar
+    .filter(jugador => !jugador.esHack) 
+    .sort((a, b) => b.puntajeFinal - a.puntajeFinal) 
+    .slice(0, 3) 
+    .map(({ nombreUsuario, puntajeFinal }) => ({ nombreUsuario, puntajeFinal })); 
 };
 
 const jugadores = [
